@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+src=res/logo.png
+sizes=(16 32 48 128)
+for s in "${sizes[@]}"; do
+  magick "$src" -resize "${s}x${s}" "res/icon-${s}.png"
+done

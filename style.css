@@ -1,0 +1,382 @@
+html.dark[data-oled],
+html.dark[data-oled] body,
+html.dark[data-oled] :not(:where(.light, .light *)),
+.dark[data-oled],
+.dark {
+  --pl0: rgb(from var(--pk0) r g b / 0.6) !important;
+  --main-surface-primary: var(--shade-3) !important;
+  --main-surface-secondary: var(--cx4) !important;
+  --menu-item-highlighted: var(--faded) !important;
+  --menu-item-active: var(--shade-2) !important;
+  --bg-primary: var(--xgo) !important;
+  --bg-elevated-secondary: #000;
+  --sidebar-surface-primary: var(--shade-1);
+  --bg-tooltip: var(--wk2) !important;
+  --border-tooltip: #ffffff0d;
+  --border-extra-light: var(--faded) !important;
+  --sidebar-icon: var(--cc1) !important;
+  --surface-hover: var(--faded) !important;
+  --theme-submit-btn-bg: var(--faded) !important;
+  --theme-submit-btn-text: var(--cc4) !important;
+  --component-sidebar-bg: var(--faded) !important;
+  --theme-secondary-btn-bg: var(--shade-1) !important;
+  --theme-secondary-btn-text: var(--cc1) !important;
+  --tw-prose-inline-code-bg: var(--shade-1) !important;
+  --tw-prose-code: var(--cz3) !important;
+  --bg-secondary: var(--faded) !important;
+  --bg-secondary-surface: var(--shade-1) !important;
+  --bg-tertiary: var(--shade-1) !important;
+  --bg-scrim: var(--faded) !important;
+  --bg-elevated-primary: var(--faded) !important;
+  --bg-elevated-secondary: var(--faded) !important;
+}
+
+.dark\:bg-\[\#353535\]:where(.dark, .dark *):not(
+    :where(.dark .light, .dark .light *)
+  ) {
+  background-color: transparent !important;
+  backdrop-filter: blur(10px);
+  box-shadow: none !important;
+}
+
+[data-voice-floating-orb-focus-background] h1 {
+  filter: blur(30px) hue-rotate(270deg);
+}
+
+button[aria-label="Turn on temporary chat"] {
+  color: var(--pk9) !important;
+  text-shadow: 0 0 10px black !important;
+}
+
+html.dark,
+html.dark :not(:where(.light, .light *)) {
+  --main-surface-primary: #000000aa !important;
+}
+
+.__menu-item {
+  --menu-item-color: var(--c06) !important;
+}
+
+.__menu-item[data-color="danger"] {
+  --menu-item-color: var(--interactive-label-default-danger-soft) !important;
+}
+
+div[data-radix-popper-content-wrapper] {
+  background: transparent !important;
+}
+
+#stage-popover-sidebar {
+  backdrop-filter: blur(10px) !important;
+}
+
+nav div:nth-child(3) {
+  backdrop-filter: blur(10px) !important;
+  background-color: var(--shade-1) !important;
+
+  [data-sidebar-item="true"] > div {
+    > div:first-child {
+      color: var(--cy1) !important;
+    }
+
+    > div:nth-child(2) {
+      color: var(--cy6) !important;
+    }
+  }
+}
+
+nav {
+  [data-sidebar-item="true"] {
+    > .flex.min-w-0.items-center.gap-1\.5 {
+      > div:first-child {
+        color: var(--pk9) !important;
+      }
+
+      > div:nth-child(2) {
+        color: var(--cc7) !important;
+      }
+    }
+  }
+}
+
+nav a[href="/library"][data-sidebar-item="true"] {
+  color: var(--cx7) !important;
+
+  svg {
+    color: var(--pk0) !important;
+  }
+}
+
+nav div[data-state="closed"] > button[data-sidebar-item="true"] {
+  color: var(--cc6) !important;
+}
+
+nav
+  div[data-state="closed"]
+  > button[data-sidebar-item="true"][data-sidebar-keep-open="true"] {
+  color: var(--cy3) !important;
+  width: auto !important;
+  min-width: 100% !important;
+  margin: auto !important;
+  justify-content: center !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+nav
+  div[data-state="closed"]
+  > a[data-sidebar-item="true"][data-testid="create-new-chat-button"] {
+  color: var(--cc2) !important;
+}
+
+nav button[aria-controls="stage-slideover-sidebar"] {
+  transition: color 200ms ease;
+}
+
+nav span[data-state="closed"] button[aria-controls="stage-slideover-sidebar"] {
+  transition: all;
+  color: var(--cc6) !important;
+}
+
+nav
+  span[data-state="instant-open"]
+  button[aria-controls="stage-slideover-sidebar"] {
+  color: var(--cc2) !important;
+}
+
+nav
+  span[data-state="delayed-open"]
+  button[aria-controls="stage-slideover-sidebar"] {
+  color: var(--cy3) !important;
+}
+
+span[class][data-state="closed"] > span[data-testid="webpage-citation-pill"] {
+  width: max-content !important;
+
+  > a[rel="noopener"][href] {
+    filter: sepia(1) saturate(3) hue-rotate(240deg);
+    font-weight: bold !important;
+  }
+}
+
+.\@container\/main > div {
+  scrollbar-color: var(--cz4) transparent;
+  scrollbar-width: thin;
+}
+
+.user-message-bubble-color {
+  background-color: var(--pk0) !important;
+  color: black !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 10px var(--cz1);
+  box-shadow:
+    0 0 30px var(--pk0),
+    inset 0 0 20px var(--sk3) !important;
+}
+
+body {
+  background: #2f003fdd !important;
+}
+
+main {
+  margin-top: -52px !important;
+}
+
+[data-message-author-role="user"] {
+  margin-top: 50px !important;
+}
+
+svg.motion-safe\:animate-spin {
+  color: red !important;
+}
+
+div[data-prompt-textarea-header],
+div#thread-bottom ~ div,
+[aria-label="Model selector"] ~ div,
+div > [aria-label="Model selector"],
+div > button[aria-label="Claim offer"] {
+  display: none !important;
+}
+
+nav {
+  scrollbar-color: var(--faded) transparent !important;
+}
+
+nav ~ div {
+  background: transparent !important;
+  backdrop-filter: blur(8px) !important;
+  padding: 0 !important;
+}
+
+#page-header {
+  backdrop-filter: blur(8px) !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: max-content;
+  align-self: end;
+  background: var(--faded) !important;
+  border-radius: 0 0 20px 20px;
+
+  [data-testid="open-sidebar-button"] svg {
+    color: var(--cc1);
+  }
+
+  [aria-label="Model selector"] svg {
+    color: var(--cc3);
+  }
+
+  a[aria-label="New chat"] svg {
+    color: var(--cc2);
+  }
+
+  [data-testid="share-chat-button"] > div {
+    color: transparent !important;
+    font-size: 0;
+    margin-right: -8px;
+  }
+
+  [data-testid="share-chat-button"] svg {
+    color: var(--cy4);
+  }
+
+  [data-testid="conversation-options-button"] svg {
+    color: var(--cz7);
+  }
+}
+
+.contents button[aria-label="Copy"][data-state="closed"] {
+  color: var(--cy1) !important;
+}
+
+button.composer-btn {
+  &[aria-label="Start dictation"] {
+    color: var(--cc4) !important;
+  }
+
+  &[data-testid="composer-plus-btn"] {
+    color: var(--c01) !important;
+  }
+}
+
+div[data-side="top"][data-align="start"][role="menu"][aria-orientation="vertical"] {
+  background: var(--shade-1) !important;
+  outline: solid 8px var(--faded) !important;
+  outline-offset: -8px;
+  box-shadow: none !important;
+}
+
+[data-testid="use-case-prompt-chips"] button,
+#history > ul > li.list-none > a[data-active] {
+  background: var(--faded) !important;
+  border: none !important;
+
+  & > span:first-of-type {
+    color: var(--cy4) !important;
+  }
+
+  & span {
+    color: var(--text-primary) !important;
+  }
+}
+
+.border-token-border-heavy {
+  border: none !important;
+}
+
+div[data-radix-popper-content-wrapper],
+.cm-scroller,
+[data-side="right"][data-align="end"][role="menu"][aria-orientation="vertical"][data-state="open"][data-radix-menu-content=""] {
+  background: var(--faded) !important;
+}
+
+div[data-composer-surface="true"] {
+  backdrop-filter: blur(8px);
+  border-radius: 18px !important;
+  background: var(--faded) !important;
+  box-shadow:
+    0 0 32px 4px var(--faded),
+    0 0 48px var(--c00) !important;
+  caret-shape: block !important;
+  caret-animation: manual;
+
+  &::spelling-error {
+    text-decoration: dotted cyan dashed !important;
+  }
+
+  :is(textarea, input, [contenteditable]) {
+    &::spelling-error {
+      text-decoration: underline dashed var(--pl0) !important;
+      text-underline-offset: 6px;
+    }
+  }
+}
+
+div[data-prompt-textarea-header] ~ form[data-type="unified-composer"] ~ div,
+.popover.bg-token-main-surface-primary div[group],
+.contents > main > #thread,
+[data-message-author-role="assistant"],
+[data-prompt-textarea-header] {
+  backdrop-filter: blur(18px) !important;
+}
+
+.placeholder[data-empty-paragraph="true"][data-placeholder="Ask anything"] {
+  &::after {
+    padding-left: 16px !important;
+  }
+}
+
+form[data-type="unified-composer"] + div {
+  background: rgb(20 20 20 / 90%) !important;
+  backdrop-filter: blur(24px) saturate(2) !important;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  color: color-mix(in srgb, var(--accent) var(--mix), white) !important;
+  opacity: 0.9;
+
+  & ~ p {
+    color: color-mix(in srgb, var(--accent) 20%, white) !important;
+    opacity: 0.7;
+  }
+}
+
+h1 {
+  --accent: var(--cc6);
+  --mix: 40%;
+}
+
+h2 {
+  --accent: var(--cx4);
+  --mix: 50%;
+}
+
+h3 {
+  --accent: var(--pk0);
+  --mix: 50%;
+}
+
+h4 {
+  --accent: var(--cc3);
+  --mix: 40%;
+}
+
+h5 {
+  --accent: var(--cc2);
+  --mix: 50%;
+}
+
+h6 {
+  --accent: var(--cc1);
+  --mix: 60%;
+}
+
+.sm-scroller {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--shade-2) transparent !important;
+}
+
+canvas#gradient-gl {
+  mix-blend-mode: color;
+  opacity: 0.8;
+  z-index: 0 !important;
+  height: 100vh !important;
+}

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+ver=$(jq -r .version manifest.json)
+slug=$(jq -r .name manifest.json | tr '[:upper:]' '[:lower:]' | tr -cs 'a-z0-9' '-' | sed 's/^-//;s/-$//')
+out="dist/${slug}-${ver}.zip"
+mkdir -p dist
+rm -f "$out"
+zip -q "$out" \
+  manifest.json \
+  main.js \
+  gradient.js \
+  colors.css \
+  style.css \
+  res/icon-16.png \
+  res/icon-32.png \
+  res/icon-48.png \
+  res/icon-128.png
+printf '%s\n' "$out"

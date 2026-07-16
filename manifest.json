@@ -1,0 +1,21 @@
+{
+  "name": "ChatGPT Gradient Theme",
+  "short_name": "ChatGPT Gradient Theme",
+  "description": "Dark ChatGPT skin with WebGL gradient and Alt shortcuts for chat, sidebar, temp",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "res/icon-16.png",
+    "32": "res/icon-32.png",
+    "48": "res/icon-48.png",
+    "128": "res/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "css": ["colors.css", "style.css"],
+      "js": ["gradient.js", "main.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
