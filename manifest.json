@@ -2,7 +2,7 @@
   "name": "ChatGPT Gradient Theme",
   "short_name": "ChatGPT Gradient Theme",
   "description": "Dark ChatGPT skin with WebGL gradient and Alt shortcuts for chat, sidebar, temp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 3,
   "icons": {
     "16": "res/icon-16.png",
