@@ -49,6 +49,10 @@ button[aria-label="Turn on temporary chat"] {
   text-shadow: 0 0 10px black !important;
 }
 
+div[role="dialog"] {
+  backdrop-filter: blur(8px);
+}
+
 html.dark,
 html.dark :not(:where(.light, .light *)) {
   --main-surface-primary: #000000aa !important;
@@ -203,12 +207,21 @@ div > button[aria-label="Claim offer"] {
 
 nav {
   scrollbar-color: var(--faded) transparent !important;
+  background: linear-gradient(
+    to right,
+    var(--shade-2) 0%,
+    transparent 80%
+  ) !important;
 }
 
 nav ~ div {
   background: transparent !important;
   backdrop-filter: blur(8px) !important;
   padding: 0 !important;
+}
+
+nav#stage-sidebar-tiny-bar ~ div {
+  overflow: hidden;
 }
 
 #page-header {
@@ -376,6 +389,14 @@ h6 {
 .sm-scroller {
   scrollbar-width: thin !important;
   scrollbar-color: var(--shade-2) transparent !important;
+}
+
+div#thread-bottom-container::after {
+  content: none !important;
+}
+
+span.grid.place-items-center {
+  color: yellow !important;
 }
 
 canvas#gradient-gl {
